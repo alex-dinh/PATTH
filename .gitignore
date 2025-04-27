@@ -1,0 +1,14 @@
+*.DS_Store
+*.pyc
+*.egg-info
+.idea/
+checkpoints/
+tb_logs/
+tb_logs_archive/
+plots/
+resources/
+data/
+videos/
+
+data.csv
+tea_checkpoint_testing.py
