@@ -1,5 +1,7 @@
 # Pay Attention to the Highway
-This project is an implements two transformer methods for improving deep reinforcement learning algorithms: the Transformer Replay Buffer and Transformer-Enhanced Actions. Agents are trained under an environment simulated by the highway-env package using gymnasium.
+This project introduces and implements two transformer methods for improving deep reinforcement learning algorithms: the Transformer Replay Buffer and Transformer-Enhanced Actions. Agents are trained under an environment simulated by the highway-env package using gymnasium.
+
+*This is a collaboration between Alexander Dinh, Gian Iacona, Shawn Mishra, and Michael Mendoza at Georgia Tech for the Spring 2025 Deep Learning course.*
 
 ## Setup
 ```commandline
