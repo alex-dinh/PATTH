@@ -35,3 +35,11 @@ Notes:
 - `--use_tea`: Use Transformer-Enhanced Actions
 - If neither `--use_trb` nor `--use_tea` is specified, the baseline algorithm with a standard replay buffer is used.
 - `--debug`: For use with `--train`. Forces single-threaded execution to allow for use with debugger. By default, training uses 8 vectorized (parallel) environments.
+
+## Demos
+### SAC+TRB
+![sactrb](https://github.com/user-attachments/assets/306ee85a-4cd1-4604-961f-576525d0b593)
+
+### SAC+TEA
+![sactea](https://github.com/user-attachments/assets/28f466ec-ebfa-4992-96d5-3985b324afe8)
+
