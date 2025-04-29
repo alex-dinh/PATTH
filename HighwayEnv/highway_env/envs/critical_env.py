@@ -1,3 +1,4 @@
+# Custom environment adapted from https://github.com/zachtian/CRITICAL
 from typing import Dict, List, Optional, Text, Tuple, TypeVar
 
 import numpy as np
@@ -32,7 +33,7 @@ class CriticalEnv(AbstractEnv):
     A highway driving environment.
 
     The vehicle is driving on a straight highway with several lanes, and is rewarded for reaching a high speed,
-    staying on the rightmost lanes and avoiding collisions.
+    staying on the rightmost lanes and avoiding collisions. Penalizes large deltas in steering outputs.
     """
 
     @classmethod

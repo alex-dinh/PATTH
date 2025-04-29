@@ -1,10 +1,9 @@
+import numpy as np
+import torch
 from tqdm import tqdm
 from gymnasium.wrappers import RecordVideo
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import SubprocVecEnv
-import numpy as np
-import torch
-import time
 from highway_config import make_critical_env
 
 
@@ -111,7 +110,7 @@ def render_agent_highway(model, env=None, num_episodes=5, record=False, file_pre
     if env is None:
         env = make_critical_env()
 
-    if record:
+    if record:  # set True to save videos
         env = RecordVideo(env, video_folder='videos', episode_trigger=lambda e: True, name_prefix=file_prefix)
         env.unwrapped.set_record_video_wrapper(env)
 

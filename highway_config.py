@@ -9,13 +9,14 @@ def make_configure_env(**kwargs):
 
 
 def make_critical_env():
+    # Custom highway-v0 that penalizes large steering deltas
     env = gym.make("critical-v0", render_mode="rgb_array")
     env = env.unwrapped
     env.reset()
     return env
 
 
-def make_critical_tenv_hard():
+def make_critical_env_hard():
     env = gym.make("critical-v0", render_mode="rgb_array")
     env = env.unwrapped
     env.config["aggressive_vehicle_ratio"] = 0.2

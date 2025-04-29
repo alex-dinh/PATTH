@@ -113,13 +113,14 @@ if __name__ == '__main__':
         model = SACTRB.load(model_checkpoint)
     elif use_tea:
         print('--- SAC+TEA ---')
-        model_checkpoint = f'checkpoints/critical/sactea/sactea_700K'
         env = make_critical_env()
-        model.set_parameters(model_checkpoint)  # must pass env to get observation space, required by transformer
+        model = SACTEA(SACTEAPolicy, env)
+        model_checkpoint = f'checkpoints/critical/sactea/sactea_final'
+        model.set_parameters(model_checkpoint)
     else:
         print('--- SAC Baseline ---')
         model_checkpoint = f'checkpoints/critical/sac/sac_700K'
         model = SAC.load(model_checkpoint)
 
-    get_agent_metrics_parallel(model)
-    # render_agent_highway(model, num_episodes=5, record=False, file_prefix='sac')
+    # get_agent_metrics_parallel(model)
+    render_agent_highway(model, num_episodes=5, record=False, file_prefix='sac')
